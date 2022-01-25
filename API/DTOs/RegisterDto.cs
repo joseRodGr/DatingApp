@@ -12,6 +12,7 @@ namespace API.DTOs
         // [Required(ErrorMessage ="Password is mandatory")]
         // [MinLength(5,ErrorMessage = "Password must be equal or greater than 5 characters")]
         [Required]
+        [StringLength(8, MinimumLength = 4)]
         public string Password { get; set; }
 
     
