@@ -77,15 +77,5 @@ namespace API.Controllers
 
         }
 
-        // private bool passwordsAreEqual(byte[] userPasswordHash, byte[] computedHash){
-            
-        //     for(int i = 0; i< computedHash.Length; i++){
-
-        //         if(computedHash[i] != userPasswordHash[i]) return false;
-
-        //     }
-
-        //     return true;
-        // }
     }
 }
