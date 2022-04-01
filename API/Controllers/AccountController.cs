@@ -60,7 +60,7 @@ namespace API.Controllers
         [HttpPost("login")]
         public async Task<ActionResult<UserDto>> Login(LoginDto loginDto)
         {
-
+            
             var user = await _userManager.Users
                             .Include(p => p.Photos)
                             .SingleOrDefaultAsync(x => x.UserName == loginDto.Username.ToLower());
@@ -85,9 +85,7 @@ namespace API.Controllers
 
         private async Task<bool> UserExists(string username)
         {
-
             return await _userManager.Users.AnyAsync(x => x.UserName == username.ToLower());
-
         }
 
     }
